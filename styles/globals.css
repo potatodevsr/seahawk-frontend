@@ -18,3 +18,19 @@ a {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.clip-path-1 {
+  clip-path: polygon(25% 0, 100% 0%, 101% 70%, 66% 80%, 0% 17%);
+}
+.clip-path-2 {
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+.radial-gradient {
+  background: rgb(8,106,215);
+  background: radial-gradient(circle, opacity-50, rgba(8,106,215,1) 0%, rgba(8,106,215,0) 100%);
+}
+.z-1{
+  z-index: 1;
+  
+
+}
