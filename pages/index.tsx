@@ -4,6 +4,10 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
 import { fetchAPI } from './api/fetchAPI'
+import { Icon1 } from './icon1'
+import { Icon2 } from './icon2'
+import { Icon3 } from './icon3'
+import { Icon4 } from './icon4'
 
 const Home: NextPage = () => {
 
@@ -43,11 +47,15 @@ const Home: NextPage = () => {
           </section>
         </div>
       </header>
-      <section className='-mt-24 mb-0 relative block box-border h-[95vh]'>
-        <div className='font-normal pt-[330px] mx-auto max-w-[1210px] decoration-black leading-6 text-left	box-border'>
-          <h1 className='max-w-[50vw] z-10 relative overflow-hidden text-9xl font-bold'>
-            Solutions For <span></span>
-            IT Business
+
+      <section className='-mt-24 mb-0 relative block box-border min-h-[900px] h-[95vh]'>
+        <div className='font-normal pt-[230px] mx-auto max-w-[1210px] decoration-black leading-6 text-left	box-border'>
+          <h1 className='max-w-[50vw] z-10 relative overflow-hidden  font-bold'>
+            <span className='text-7xl'>Solutions For</span>
+            <br />
+            <span className='text-9xl'>
+              IT Business
+            </span>
           </h1>
           <p className='decoration-black'>We Have 25 Years Of Experience In IT Solutions</p>
           <a href="relative inline-flex justify-center">Service We Provide</a>
@@ -55,9 +63,62 @@ const Home: NextPage = () => {
           <div className=' z-1 top-0 absolute right-0 w-[771px] h-[788px] clip-path-1 ' style={image1}></div>
           <div className='radial-gradient absolute left-0 top-0 h-full w-[60vw]'></div>
           <div className=' z-1 bottom-0 absolute right-8 w-[972px] h-[486px] clip-path-2 ' style={image2}></div>
-          <div className=''></div>
         </div>
       </section>
+
+      <section id="how we can help you" className=' relative box-border flex items-center flex-col font-medium'>
+        <div className='p-12'>
+          <h2 className='font-bold decoration-slate-900 text-sm uppercase flex-wrap text-center	box-border text-sm not-italic	'>HOW CAN HELP YOU</h2>
+          <h3 className='decoration-black text-4xl font-black box-border clear-both	mb-2 m-0'>We Help Your IT Business</h3>
+        </div>
+        <div className='flex w-full'>
+          <img className='flex rounded w-[395px] h-auto z-10 align-middle inline-block mr-8' src='https://rrdevs.net/demos/wp/techex/wp-content/uploads/2021/10/feature_img.jpg'></img>
+
+          <div>  <div id="services" className='grid grid-cols-2 gap-8 z-10 relative w-full'>
+            <div className='bg-white py-4 px-8  flex items-center'>
+              <Icon1></Icon1>
+              <div>
+                <h4 className='text-2xl font-bold'>IT Consultancy</h4>
+                <p>Faster & Smarter Solution</p>
+              </div>
+
+            </div>
+
+            <div className='bg-white py-4 px-8 flex items-center'>
+              <Icon2></Icon2>
+              <div>
+                <h4 className='text-2xl font-bold pt-5'>UX/UI Strategy</h4>
+                <p>Faster & Smarter Solutions</p>
+              </div>
+
+            </div>
+
+            <div className='bg-white py-4 px-8 flex items-center'>
+              <Icon3></Icon3>
+              <div>
+                <h4 className='text-2xl font-bold pt-5'>Cyber Security</h4>
+                <p>Faster & Smarter Solutions</p>
+              </div>
+            </div>
+
+            <div className='bg-white py-4 px-8 flex items-center pb-3'>
+              <Icon4></Icon4>
+              <div>
+                <h4 className='text-2xl font-bold pt-5'>Development</h4>
+                <p>Faster & Smarter Solutions</p>
+              </div>
+            </div>
+          </div>
+            <div className='bg-blue-500'>
+              Sed perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium totam rem aperiam eaque quae
+            </div></div>
+          <div className='radial-gradient-2 absolute left-0 top-0 h-full w-full'></div>
+        </div>
+
+      </section>
+
+
+
     </div>
   )
 }
