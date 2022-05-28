@@ -11,8 +11,8 @@ import { Icon4 } from './icon4'
 
 const Home: NextPage = () => {
 
-  const image1 = { "background-image": "url(https://rrdevs.net/demos/wp/techex/wp-content/uploads/2022/01/heros-01.jpg)" }
-  const image2 = { "background-image": "url(https://rrdevs.net/demos/wp/techex/wp-content/uploads/2022/01/heros-02.jpg)" }
+  const image1 = { "backgroundImage?": "url(https://rrdevs.net/demos/wp/techex/wp-content/uploads/2022/01/heros-01.jpg)" }
+  const image2 = { "backgroundImage?": "url(https://rrdevs.net/demos/wp/techex/wp-content/uploads/2022/01/heros-02.jpg)" }
 
   return (
     <div className="bg-white">
@@ -66,7 +66,7 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <section id="how we can help you" className=' relative box-border flex items-center flex-col font-medium'>
+      <section id="how we can help you" className=' mx-28 relative box-border flex items-center flex-col font-medium'>
         <div className='p-12'>
           <h2 className='font-bold decoration-slate-900 text-sm uppercase flex-wrap text-center	box-border text-sm not-italic	'>HOW CAN HELP YOU</h2>
           <h3 className='decoration-black text-4xl font-black box-border clear-both	mb-2 m-0'>We Help Your IT Business</h3>
@@ -74,7 +74,7 @@ const Home: NextPage = () => {
         <div className='flex w-full'>
           <img className='flex rounded w-[395px] h-auto z-10 align-middle inline-block mr-8' src='https://rrdevs.net/demos/wp/techex/wp-content/uploads/2021/10/feature_img.jpg'></img>
 
-          <div>  <div id="services" className='grid grid-cols-2 gap-8 z-10 relative w-full'>
+          <div>  <div id="services" className='grid grid-cols-2 gap-8 z-10 relative w-full pb-3.5'>
             <div className='bg-white py-4 px-8  flex items-center'>
               <Icon1></Icon1>
               <div>
@@ -109,7 +109,7 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-            <div className='bg-blue-500'>
+            <div className='bg-blue-500 p-20 text-white font-bold text-xl z-20 relative'>
               Sed perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium totam rem aperiam eaque quae
             </div></div>
           <div className='radial-gradient-2 absolute left-0 top-0 h-full w-full'></div>
@@ -118,8 +118,89 @@ const Home: NextPage = () => {
       </section>
 
 
+      <section id='3' className='py-32 px-28 grid grid-cols-2 mb-px mb-0 relative block box-bordern '>
+        <div>
+          <div className='font-normal mx-auto decoration-black leading-6 text-left	box-border'>
+            <h2 className='font-bold decoration-slate-900 text-sm uppercase flex-wrap text-left	box-border text-sm not-italic	'>ABOUT COMPANY</h2>
+            <h3 className='decoration-black text-4xl font-black box-border clear-both	mb-2 m-0'>Get's IT Solutions For Expert<br /> Consultants </h3>
+          </div>
 
+          <div className='py-8 font-normal mx-auto max-w-[1210px] decoration-black leading-6 text-left	box-border'>
+            <p >Sed ut perspiciatis unde omnis natus error sit voluptatem <br /> accusa ntium doloremque laudantium totam rem aperiamea <br /> queipsa quae abillo inventore veritatis et quasi architecto <br /> beatae vitae dicta sunt explicabo.</p>
+
+          </div>
+        </div>
+        <img className='flex justify-end rounded w-full h-auto z-10 align-middle inline-block mr-8' src='https://rrdevs.net/demos/wp/techex/wp-content/uploads/2021/10/about-us.jpg'></img>
+      </section>
+
+
+      <section className='bg-[#211E3B]'>
+
+        <span className='text-white'>
+          <h2>POPULAR IT SERVICES</h2>
+          <h3>Our Professional Solutions <br /> For IT Business</h3>
+        </span>
+
+
+        <div id="services" className='grid grid-cols-4  z-10 flex relative w-full pb-6'>
+
+
+          <div className='hover:bg-[#2E2A50]  py-4 px-8  flex flex-col items-center'>
+            <img className='pb-8' src="https://rrdevs.net/demos/wp/techex/wp-content/uploads/2021/10/sicon4.png" />
+            <div>
+              <h3 className='text-white inline-block'>Digital Solutions</h3>
+              <p className='text-[#9A95C0]'> Quis autem vel eum iure <br /> reprehenderit qui in ea </p>
+              <a href="https://rrdevs.net/demos/wp/techex/service/digital-solutions/">                                                 "</a>
+            </div>
+          </div>
+
+          <div className='hover:bg-[#2E2A50] py-4 px-8  flex flex-col items-center'>
+            <img className='pb-8' src="https://rrdevs.net/demos/wp/techex/wp-content/uploads/2021/10/sicon3.png" />
+            <div>
+              <h3 className='text-white'>Web Development</h3>
+              <p className='text-[#9A95C0]'> Quis autem vel eum iure <br /> reprehenderit qui in ea </p>
+            </div>
+          </div>
+
+          <div className='hover:bg-[#2E2A50] py-4 px-8  flex flex-col items-center'>
+            <img className='pb-8' src="https://rrdevs.net/demos/wp/techex/wp-content/uploads/2021/10/sicon1.png" />
+            <div>
+              <h3 className='text-white'>Manage IT Services</h3>
+              <p className='text-[#9A95C0]'> Quis autem vel eum iure <br /> reprehenderit qui in ea </p>
+            </div>
+          </div>
+
+          <div className='hover:bg-[#2E2A50] py-4 px-8  flex flex-col items-center'>
+            <img className='pb-8' src="https://rrdevs.net/demos/wp/techex/wp-content/uploads/2021/10/sicon2.png" />
+            <div>
+              <h3 className='text-white '>Product Engineering</h3>
+              <p className='text-[#9A95C0]'> Quis autem vel eum iure <br /> reprehenderit qui in ea </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section className='bg-[#086AD7] mt-36'>
+        <div> <div id="services" className='grid grid-cols-4  z-10 flex relative w-full pb-6'></div>
+
+          <div className=' py-4 px-8  flex items-center'>
+            <Icon1></Icon1>
+            <div>
+              <h4 className='text-2xl font-bold'>IT Consultancy</h4>
+              <p>Faster & Smarter Solution</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
     </div>
+
+
+
+
   )
 }
 
