@@ -8,6 +8,8 @@ import { Icon1 } from './icon1'
 import { Icon2 } from './icon2'
 import { Icon3 } from './icon3'
 import { Icon4 } from './icon4'
+import { Icon5 } from './icon5'
+import { Icon6 } from './icon6'
 
 const Home: NextPage = () => {
 
@@ -180,22 +182,47 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-
-      <section className='bg-[#086AD7] mt-36'>
-        <div> <div id="services" className='grid grid-cols-4  z-10 flex relative w-full pb-6'></div>
-
-          <div className=' py-4 px-8  flex items-center'>
-            <Icon1></Icon1>
+      <section className='bg-[#086AD7]'>
+        <div id="services" className='grid grid-cols-4  z-10 flex relative w-full pb-6'>
+          <div className='py-4 px-8 text-white flex flex-col items-center'>
+            <Icon5></Icon5>
             <div>
-              <h4 className='text-2xl font-bold'>IT Consultancy</h4>
-              <p>Faster & Smarter Solution</p>
+              <span className='text-white'>+</span>
+              <h1 className='text-white text-center'>368</h1>
+              <h3 className='text-white text-center'>Project Completed</h3>
             </div>
+          </div>
 
+          <div className='py-4 px-8 text-white flex flex-col items-center'>
+            <Icon6></Icon6>
+            <div>
+              <span className='text-white'>+</span>
+              <h1 className='text-white text-center'>785</h1>
+              <h3 className='text-white text-center'>Expert Consultants</h3>
+            </div>
+          </div>
+
+          <div className='py-4 px-8  flex flex-col items-center'>
+            <Icon5></Icon5>
+            <div>
+              <span className='text-white'>+</span>
+              <h1 className='text-white text-center'>897</h1>
+              <h3 className='text-white text-center'>5 Stars Rating</h3>
+            </div>
+          </div>
+
+          <div className='py-4 px-8  flex flex-col items-center'>
+            <Icon5></Icon5>
+            <div>
+              <span className='text-white text-left'>+</span>
+              <h1 className='text-white text-center'>125</h1>
+              <h3 className='text-white text-center'>Awards Winning</h3>
+            </div>
           </div>
 
         </div>
-
       </section>
+
     </div>
 
 

@@ -29,12 +29,18 @@ a {
 
 .radial-gradient {
   background: radial-gradient(circle, rgba(8, 105, 215, 0.571) 0%, rgba(8, 106, 215, 0) 70%);
-  
-}
-.radial-gradient-2 {
-background: radial-gradient(circle, rgb(8 105 215 / 11%) 0%, rgba(8, 106, 215, 0) 70%);
 
 }
+
+.radial-gradient-2 {
+  background: radial-gradient(circle, rgb(8 105 215 / 11%) 0%, rgba(8, 106, 215, 0) 70%);
+
+}
+
 .z-1 {
   z-index: 1;
+}
+
+svg {
+  fill: currentColor;
 }
