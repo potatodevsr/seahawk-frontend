@@ -2,19 +2,26 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import { Button, Button1 } from '../components/button'
+import { Button2 } from '../components/button/index1'
 import styles from '../styles/Home.module.css'
 import { fetchAPI } from './api/fetchAPI'
 import { Icon1 } from './icon1'
+import { Icon10 } from './icon10'
 import { Icon2 } from './icon2'
 import { Icon3 } from './icon3'
 import { Icon4 } from './icon4'
 import { Icon5 } from './icon5'
 import { Icon6 } from './icon6'
+import { Icon7 } from './icon7'
+import { Icon8 } from './icon8'
+import { Icon9 } from './icon9'
+
 
 const Home: NextPage = () => {
 
   const image1 = { "backgroundImage?": "url(https://rrdevs.net/demos/wp/techex/wp-content/uploads/2022/01/heros-01.jpg)" }
-  const image2 = { "backgroundImage?": "url(https://rrdevs.net/demos/wp/techex/wp-content/uploads/2022/01/heros-02.jpg)" }
+  const image2 = { "backgroundImage?": "url(https://rrdevs.net/demos/wp/techex/wp-content/uploads/2022/01/heros-02.jpg" }
 
   return (
     <div className="bg-white">
@@ -59,18 +66,27 @@ const Home: NextPage = () => {
               IT Business
             </span>
           </h1>
-          <p className='decoration-black'>We Have 25 Years Of Experience In IT Solutions</p>
-          <a href="relative inline-flex justify-center">Service We Provide</a>
+          <p className='text-2xl decoration-black'>We Have 25 Years Of Experience In IT Solutions</p>
+          <div>
+            <div className='px-7 py-14 border border-solid border-[#312E49] hover:bg-[#2E2A50] flex flex-col items-center'>
+              <a href="relative inline-flex justify-center">Service We Provide</a></div>
+            <div>
 
+              <div className='px-7 py-14 border border-solid border-[#312E49] hover:bg-[#2E2A50] flex flex-col items-center'>
+                <a href="relative inline-flex justify-center">LEARN MORE</a></div>
+            </div>
+          </div>
+          {/* @ts-ignore */}
           <div className=' z-1 top-0 absolute right-0 w-[771px] h-[788px] clip-path-1 ' style={image1}></div>
           <div className='radial-gradient absolute left-0 top-0 h-full w-[60vw]'></div>
+          {/* @ts-ignore */}
           <div className=' z-1 bottom-0 absolute right-8 w-[972px] h-[486px] clip-path-2 ' style={image2}></div>
         </div>
-      </section>
+      </section >
 
       <section id="how we can help you" className=' mx-28 relative box-border flex items-center flex-col font-medium'>
         <div className='p-12'>
-          <h2 className='font-bold decoration-slate-900 text-sm uppercase flex-wrap text-center	box-border text-sm not-italic	'>HOW CAN HELP YOU</h2>
+          <h2 className='font-bold decoration-slate-900 text-sm uppercase flex-wrap text-center	box-border text-sm not-italic text-[#086AD7]'>HOW CAN HELP YOU</h2>
           <h3 className='decoration-black text-4xl font-black box-border clear-both	mb-2 m-0'>We Help Your IT Business</h3>
         </div>
         <div className='flex w-full'>
@@ -120,63 +136,86 @@ const Home: NextPage = () => {
       </section>
 
 
-      <section id='3' className='py-32 px-28 grid grid-cols-2 mb-px mb-0 relative block box-bordern '>
+      <section id='3' className='py-32 px-28 gap-24 grid grid-cols-2 mb-px mb-0 relative block box-bordern '>
         <div>
           <div className='font-normal mx-auto decoration-black leading-6 text-left	box-border'>
-            <h2 className='font-bold decoration-slate-900 text-sm uppercase flex-wrap text-left	box-border text-sm not-italic	'>ABOUT COMPANY</h2>
+            <h2 className='font-bold decoration-slate-900 text-sm uppercase flex-wrap text-left	box-border text-sm not-italic text-[#086AD7]	'>ABOUT COMPANY</h2>
             <h3 className='decoration-black text-4xl font-black box-border clear-both	mb-2 m-0'>Get's IT Solutions For Expert<br /> Consultants </h3>
           </div>
-
-          <div className='py-8 font-normal mx-auto max-w-[1210px] decoration-black leading-6 text-left	box-border'>
+          <div className='py-8 font-normal mx-auto max-w-[1210px] decoration-black leading-6 text-left box-border'>
             <p >Sed ut perspiciatis unde omnis natus error sit voluptatem <br /> accusa ntium doloremque laudantium totam rem aperiamea <br /> queipsa quae abillo inventore veritatis et quasi architecto <br /> beatae vitae dicta sunt explicabo.</p>
-
+          </div>
+          <div className='hover:border-[#007bff] border border-solid border-[#EEF4FC] pt-1.5 px-4 pb-5 bg-white flex items-center pt-5'>
+            <div className='text-[#007bff]'>
+              <Icon9></Icon9>
+            </div>
+            <div className='ml-6 w-full border-solid'>
+              <h4 className='text-2xl font-bold pt-5'>Professional Consultants</h4>
+              <p className='text-[#696969]'>Quis autem vel eum iure reprehenderit quin voluptate <br /> velit esse quam
+              </p>
+            </div>
           </div>
         </div>
-        <img className='flex justify-end rounded w-full h-auto z-10 align-middle inline-block mr-8' src='https://rrdevs.net/demos/wp/techex/wp-content/uploads/2021/10/about-us.jpg'></img>
+        <img className='w-full flex rounded h-auto z-10 align-middle inline-block mr-8' src='https://rrdevs.net/demos/wp/techex/wp-content/uploads/2021/10/about-us.jpg'></img>
       </section>
 
 
-      <section className='bg-[#211E3B]'>
+      <section className='bg-[#211E3B] py-28'>
 
-        <span className='text-white'>
-          <h2>POPULAR IT SERVICES</h2>
-          <h3>Our Professional Solutions <br /> For IT Business</h3>
+        <span className='text-white px-2.5 py-2.5'>
+          <h2 className='text-center font-bold text-sm'>POPULAR IT SERVICES</h2>
+          <h3 className='text-center text-5xl font-black'>Our Professional Solutions <br /> For IT Business</h3>
         </span>
 
 
-        <div id="services" className='grid grid-cols-4  z-10 flex relative w-full pb-6'>
+        <div id="services" className='mx-auto max-w-[1210px] gap-10 grid grid-cols-4  z-10 flex relative w-full pb-6'>
 
 
-          <div className='hover:bg-[#2E2A50]  py-4 px-8  flex flex-col items-center'>
+          <div className='px-7 py-14 border border-solid border-[#312E49] hover:bg-[#2E2A50] flex flex-col items-center'>
             <img className='pb-8' src="https://rrdevs.net/demos/wp/techex/wp-content/uploads/2021/10/sicon4.png" />
             <div>
               <h3 className='text-white inline-block'>Digital Solutions</h3>
-              <p className='text-[#9A95C0]'> Quis autem vel eum iure <br /> reprehenderit qui in ea </p>
-              <a href="https://rrdevs.net/demos/wp/techex/service/digital-solutions/">                                                 "</a>
+              <p className='mb-2.5 text-[#9A95C0]'> Quis autem vel eum iure <br /> reprehenderit qui in ea </p>
+              <p className='hover:bg-[#2E2A50] justify-between px-6 items-center text-[#9A95C0] flex w-full text-xs'>
+                LEARN MORE
+                <Icon10></Icon10>
+              </p>
             </div>
           </div>
 
-          <div className='hover:bg-[#2E2A50] py-4 px-8  flex flex-col items-center'>
+          <div className='px-7 py-14 border border-solid border-[#312E49] hover:bg-[#2E2A50] flex flex-col items-center'>
             <img className='pb-8' src="https://rrdevs.net/demos/wp/techex/wp-content/uploads/2021/10/sicon3.png" />
             <div>
               <h3 className='text-white'>Web Development</h3>
-              <p className='text-[#9A95C0]'> Quis autem vel eum iure <br /> reprehenderit qui in ea </p>
+              <p className='mb-2.5 text-[#9A95C0]'> Quis autem vel eum iure <br /> reprehenderit qui in ea </p>
+              <p className='hover:bg-[#2E2A50] justify-between px-6 items-center text-[#9A95C0] flex w-full text-xs'>
+                LEARN MORE
+                <Icon10></Icon10>
+              </p>
             </div>
           </div>
 
-          <div className='hover:bg-[#2E2A50] py-4 px-8  flex flex-col items-center'>
+          <div className='px-7 py-14 border border-solid border-[#312E49] hover:bg-[#2E2A50] flex flex-col items-center'>
             <img className='pb-8' src="https://rrdevs.net/demos/wp/techex/wp-content/uploads/2021/10/sicon1.png" />
             <div>
               <h3 className='text-white'>Manage IT Services</h3>
-              <p className='text-[#9A95C0]'> Quis autem vel eum iure <br /> reprehenderit qui in ea </p>
+              <p className='mb-2.5 text-[#9A95C0]'> Quis autem vel eum iure <br /> reprehenderit qui in ea </p>
+              <p className='hover:bg-[#2E2A50] justify-between px-6 items-center text-[#9A95C0] flex w-full text-xs'>
+                LEARN MORE
+                <Icon10></Icon10>
+              </p>
             </div>
           </div>
 
-          <div className='hover:bg-[#2E2A50] py-4 px-8  flex flex-col items-center'>
+          <div className='px-7 py-14 border border-solid border-[#312E49] hover:bg-[#2E2A50] flex flex-col items-center'>
             <img className='pb-8' src="https://rrdevs.net/demos/wp/techex/wp-content/uploads/2021/10/sicon2.png" />
             <div>
               <h3 className='text-white '>Product Engineering</h3>
-              <p className='text-[#9A95C0]'> Quis autem vel eum iure <br /> reprehenderit qui in ea </p>
+              <p className='mb-2.5 text-[#9A95C0]'> Quis autem vel eum iure <br /> reprehenderit qui in ea </p>
+              <p className='hover:bg-[#2E2A50] justify-between px-6 items-center text-[#9A95C0] flex w-full text-xs'>
+                LEARN MORE
+                <Icon10></Icon10>
+              </p>
             </div>
           </div>
         </div>
@@ -202,8 +241,8 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className='py-4 px-8  flex flex-col items-center'>
-            <Icon5></Icon5>
+          <div className='py-4 px-8 text-white flex flex-col items-center'>
+            <Icon7></Icon7>
             <div>
               <span className='text-white'>+</span>
               <h1 className='text-white text-center'>897</h1>
@@ -211,8 +250,8 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className='py-4 px-8  flex flex-col items-center'>
-            <Icon5></Icon5>
+          <div className='py-4 px-8 text-white flex flex-col items-center'>
+            <Icon8></Icon8>
             <div>
               <span className='text-white text-left'>+</span>
               <h1 className='text-white text-center'>125</h1>
@@ -223,7 +262,72 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-    </div>
+
+      <section id='3' className='py-32 px-28 grid grid-cols-2 mb-px mb-0 relative block box-bordern '>
+        <div>
+          <div className='font-normal mx-auto decoration-black leading-6 text-left	box-border'>
+            <h2 className='text-[#086AD7] font-bold decoration-slate-900 text-sm uppercase flex-wrap text-left	box-border text-sm not-italic	'>OUR RECENT PROJECT</h2>
+            <h3 className='decoration-black text-4xl font-black box-border clear-both	mb-2 m-0'>Latest Case Studies</h3>
+          </div>
+        </div>
+      </section>
+
+      <footer id='3'>
+        <section className='py-32 px-28 bg-[#211E3B] grid grid-cols-4 mb-px mb-0 relative block box-bordern '>
+          <div className='flex w-full'>
+            <div className='font-normal mx-auto decoration-black leading-6 text-left	box-border'>
+              <h3 className='text-4xl text-white decoration-black font-black box-border clear-both	mb-2 m-0'>Ready To Get Free Consulations <br /> For Any Kind Of It Solutions ?</h3>
+            </div>
+          </div>
+          <Button1></Button1>
+          <Button2></Button2>
+        </section>
+
+        <section className='flex items-center justify-between mx-auto max-w-[1210px]'>
+          <div className='logo '>
+            <img
+              src="https://rrdevs.net/demos/wp/techex/wp-content/uploads/2022/01/logo-black.svg"
+              alt="Techex" />
+            <div className='my-8'>
+              Sed ut perspiciatis unde omnis <br /> natus voluptatem accusa ntiumy <br /> doloremque laudantium.
+            </div>
+          </div>
+
+          <div>
+            <h2 className='font-bold'>Company</h2>
+            <ul className='my-8'>
+              <li>About us</li>
+              <li>Need a Career</li>
+              <li>Working Process</li>
+              <li>Blog Post</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className='font-bold'>News News</h2>
+            <ul className='my-8'>
+              <li>About us</li>
+              <li>Need a Career</li>
+              <li>Working Process</li>
+              <li>Blog Post</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className='font-bold'>Contact Us</h2>
+            <ul className='my-8'>
+              <li>256 Elizaberth Ave, Brooklyn, CA, 90025</li>
+              <li>info@supportexam.com</li>
+              <li>+012 (345) 678 99</li>
+            </ul>
+          </div>
+        </section>
+
+
+      </footer>
+
+
+    </div >
 
 
 
