@@ -4,6 +4,9 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { Button, Button1 } from '../components/button'
 import { Button2 } from '../components/button/index1'
+import { Header } from '../components/html-containers/header'
+import { HeaderBanner } from '../components/html-containers/header-banner'
+import { HowWeCanHelp } from '../components/html-containers/how-we-can-help'
 import styles from '../styles/Home.module.css'
 import { fetchAPI } from './api/fetchAPI'
 import { Icon1 } from './icon1'
@@ -20,8 +23,6 @@ import { Icon9 } from './icon9'
 
 const Home: NextPage = () => {
 
-  const image1 = { "backgroundImage?": "url(https://rrdevs.net/demos/wp/techex/wp-content/uploads/2022/01/heros-01.jpg)" }
-  const image2 = { "backgroundImage?": "url(https://rrdevs.net/demos/wp/techex/wp-content/uploads/2022/01/heros-02.jpg" }
 
   return (
     <div className="bg-white">
@@ -31,111 +32,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className='relative z-10 block'>
-        <div>
-          <section className='my-0 mt-[10px]'>
-            <nav className='flex items-center justify-between mx-auto max-w-[1210px]'>
-              <div className='logo'>
-                <img
-                  src="https://rrdevs.net/demos/wp/techex/wp-content/uploads/2022/01/logo-black.svg"
-                  alt="Techex"
-                  className="w-[160px]" />
-              </div>
-              <div className='menu'>
-                <ul className='flex'>
-                  <li className='px-4 py-2'>Demos</li>
-                  <li className='px-4 py-2'>Pages</li>
-                  <li className='px-4 py-2'>Blog</li>
-                  <li className='px-4 py-2'>Contact</li>
-                </ul>
-              </div>
-              <div className='action-button'>
-                <a href="#" className='font-bold text-sm uppercase drop-shadow text-white bg-[#086AD7] hover:bg-[#000001] rounded-md py-5 px-10' >Contact Us</a>
-              </div>
-            </nav>
-          </section>
-        </div>
-      </header>
-
-      <section className='-mt-24 mb-0 relative block box-border min-h-[900px] h-[95vh]'>
-        <div className='font-normal pt-[230px] mx-auto max-w-[1210px] decoration-black leading-6 text-left	box-border'>
-          <h1 className='max-w-[50vw] z-10 relative overflow-hidden  font-bold'>
-            <span className='text-7xl'>Solutions For</span>
-            <br />
-            <span className='text-9xl'>
-              IT Business
-            </span>
-          </h1>
-          <p className='text-2xl decoration-black'>We Have 25 Years Of Experience In IT Solutions</p>
-          <div>
-            <div className='px-7 py-14 border border-solid border-[#312E49] hover:bg-[#2E2A50] flex flex-col items-center'>
-              <a href="relative inline-flex justify-center">Service We Provide</a></div>
-            <div>
-
-              <div className='px-7 py-14 border border-solid border-[#312E49] hover:bg-[#2E2A50] flex flex-col items-center'>
-                <a href="relative inline-flex justify-center">LEARN MORE</a></div>
-            </div>
-          </div>
-          {/* @ts-ignore */}
-          <div className=' z-1 top-0 absolute right-0 w-[771px] h-[788px] clip-path-1 ' style={image1}></div>
-          <div className='radial-gradient absolute left-0 top-0 h-full w-[60vw]'></div>
-          {/* @ts-ignore */}
-          <div className=' z-1 bottom-0 absolute right-8 w-[972px] h-[486px] clip-path-2 ' style={image2}></div>
-        </div>
-      </section >
-
-      <section id="how we can help you" className=' mx-28 relative box-border flex items-center flex-col font-medium'>
-        <div className='p-12'>
-          <h2 className='font-bold decoration-slate-900 text-sm uppercase flex-wrap text-center	box-border text-sm not-italic text-[#086AD7]'>HOW CAN HELP YOU</h2>
-          <h3 className='decoration-black text-4xl font-black box-border clear-both	mb-2 m-0'>We Help Your IT Business</h3>
-        </div>
-        <div className='flex w-full'>
-          <img className='flex rounded w-[395px] h-auto z-10 align-middle inline-block mr-8' src='https://rrdevs.net/demos/wp/techex/wp-content/uploads/2021/10/feature_img.jpg'></img>
-
-          <div>  <div id="services" className='grid grid-cols-2 gap-8 z-10 relative w-full pb-3.5'>
-            <div className='bg-white py-4 px-8  flex items-center'>
-              <Icon1></Icon1>
-              <div>
-                <h4 className='text-2xl font-bold'>IT Consultancy</h4>
-                <p>Faster & Smarter Solution</p>
-              </div>
-
-            </div>
-
-            <div className='bg-white py-4 px-8 flex items-center'>
-              <Icon2></Icon2>
-              <div>
-                <h4 className='text-2xl font-bold pt-5'>UX/UI Strategy</h4>
-                <p>Faster & Smarter Solutions</p>
-              </div>
-
-            </div>
-
-            <div className='bg-white py-4 px-8 flex items-center'>
-              <Icon3></Icon3>
-              <div>
-                <h4 className='text-2xl font-bold pt-5'>Cyber Security</h4>
-                <p>Faster & Smarter Solutions</p>
-              </div>
-            </div>
-
-            <div className='bg-white py-4 px-8 flex items-center pb-3'>
-              <Icon4></Icon4>
-              <div>
-                <h4 className='text-2xl font-bold pt-5'>Development</h4>
-                <p>Faster & Smarter Solutions</p>
-              </div>
-            </div>
-          </div>
-            <div className='bg-blue-500 p-20 text-white font-bold text-xl z-20 relative'>
-              Sed perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium totam rem aperiam eaque quae
-            </div></div>
-          <div className='radial-gradient-2 absolute left-0 top-0 h-full w-full'></div>
-        </div>
-
-      </section>
-
-
+      <Header></Header>
+      <HeaderBanner></HeaderBanner>
+      <HowWeCanHelp></HowWeCanHelp>
+      
       <section id='3' className='py-32 px-28 gap-24 grid grid-cols-2 mb-px mb-0 relative block box-bordern '>
         <div>
           <div className='font-normal mx-auto decoration-black leading-6 text-left	box-border'>
@@ -145,7 +45,7 @@ const Home: NextPage = () => {
           <div className='py-8 font-normal mx-auto max-w-[1210px] decoration-black leading-6 text-left box-border'>
             <p >Sed ut perspiciatis unde omnis natus error sit voluptatem <br /> accusa ntium doloremque laudantium totam rem aperiamea <br /> queipsa quae abillo inventore veritatis et quasi architecto <br /> beatae vitae dicta sunt explicabo.</p>
           </div>
-          <div className='hover:border-[#007bff] border border-solid border-[#EEF4FC] pt-1.5 px-4 pb-5 bg-white flex items-center pt-5'>
+          <div className='rounded-lg hover:border-[#007bff] border border-solid border-[#EEF4FC] pt-1.5 px-4 pb-5 bg-white flex items-center pt-5'>
             <div className='text-[#007bff]'>
               <Icon9></Icon9>
             </div>
