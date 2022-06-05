@@ -1,7 +1,12 @@
-import React from 'react'
+import clsx from 'clsx'
+import React, { FC, ReactNode } from 'react'
 
-export const Button1 = () => {
+interface Props {
+  children: ReactNode
+  className?: string
+}
+export const Button: FC<Props> = ({ children, className }) => {
   return (
-    <button className='text-white'>GET A QUOTE</button>
+    <button className={clsx(className, 'text-white max-h-[44px]')}>{children}</button>
   )
 }
