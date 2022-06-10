@@ -6,7 +6,7 @@ import { Icon8 } from '../../../pages/icon8'
 
 function Project() {
   return (
-    <section className='mx-10 bg-[#086AD7] rounded-lg z-10'>
+    <section className='-mt-20 mx-10 bg-[#086AD7] rounded-lg z-10'>
     <div id="services" className='pt-16 grid grid-cols-4  z-10 flex relative w-full pb-6'>
       <div className='py-4 px-8 text-white flex flex-col items-center'>
         <Icon5></Icon5>

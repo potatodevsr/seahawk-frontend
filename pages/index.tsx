@@ -5,13 +5,16 @@ import { useEffect, useState } from 'react'
 // import { Button1 } from '../components/button'
 // import { Button2 } from '../components/button/index1'
 import { About } from '../components/html-containers/about'
+import { Costumer } from '../components/html-containers/custumer'
 import { Footer } from '../components/html-containers/footer'
 import { Header } from '../components/html-containers/header'
 import { HeaderBanner } from '../components/html-containers/header-banner'
 import { HowWeCanHelp } from '../components/html-containers/how-we-can-help'
+import { OurPricingPlan } from '../components/html-containers/our-pricing-plan'
 import { Poppular } from '../components/html-containers/poppular'
 import Project from '../components/html-containers/project'
 import { RecentProject } from '../components/html-containers/recent-project'
+import { Review } from '../components/html-containers/review'
 import styles from '../styles/Home.module.css'
 import { fetchAPI } from './api/fetchAPI'
 import { Icon1 } from './icon1'
@@ -43,8 +46,10 @@ const Home: NextPage = () => {
       <About></About>
       <Poppular></Poppular>
       <Project></Project>
-    <RecentProject></RecentProject>
-      
+      <RecentProject></RecentProject>
+      <Costumer></Costumer>
+      <OurPricingPlan></OurPricingPlan>
+      <Review></Review>
       <Footer></Footer>
 
 
