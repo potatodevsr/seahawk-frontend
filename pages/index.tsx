@@ -5,11 +5,13 @@ import { useEffect, useState } from 'react'
 // import { Button1 } from '../components/button'
 // import { Button2 } from '../components/button/index1'
 import { About } from '../components/html-containers/about'
+import { AnyKindOfItSolutions } from '../components/html-containers/any-kind-of-it-solutions '
 import { Costumer } from '../components/html-containers/custumer'
 import { Footer } from '../components/html-containers/footer'
 import { Header } from '../components/html-containers/header'
 import { HeaderBanner } from '../components/html-containers/header-banner'
 import { HowWeCanHelp } from '../components/html-containers/how-we-can-help'
+import { LatestNewsBlog } from '../components/html-containers/letest-news-blog'
 import { OurPricingPlan } from '../components/html-containers/our-pricing-plan'
 import { Poppular } from '../components/html-containers/poppular'
 import Project from '../components/html-containers/project'
@@ -50,6 +52,8 @@ const Home: NextPage = () => {
       <Costumer></Costumer>
       <OurPricingPlan></OurPricingPlan>
       <Review></Review>
+      <LatestNewsBlog></LatestNewsBlog>
+      <AnyKindOfItSolutions></AnyKindOfItSolutions>
       <Footer></Footer>
 
 
