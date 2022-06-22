@@ -44,3 +44,7 @@ a {
 svg {
   fill: currentColor;
 }
+
+.animated {
+  transition: all 0.2s ease;
+}

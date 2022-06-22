@@ -7,7 +7,7 @@ export const HeaderBanner = () => {
   
     return (
         <section className='mx-26 -mt-24 mb-0 relative block box-border min-h-[900px] h-[95vh]'>
-            <div className='font-normal pt-[230px] pl- max-w-[50%] decoration-black leading-6 text-left	box-border'>
+            <div className='font-normal pt-[230px] pl-32 decoration-black leading-6 text-left	box-border'>
                 <h1 className='max-w-[50vw] z-10 relative overflow-hidden  font-bold'>
                     <span className='text-7xl'>Solutions For</span>
                     <br />
@@ -16,11 +16,11 @@ export const HeaderBanner = () => {
                     </span>
                 </h1>
                 <p className='mt-5 font-medium text-2xl text-2xl decoration-black'>We Have 25 Years Of Experience In IT Solutions</p>
-                <div className='mt-9 justify-between flex'>
-                    <div className='rounded-lg z-10 whitespace-nowrap w-80 h-14 bg-[#086AD7] mr-5 px-3.5 text-xs items-center relative inline-flex justify-center border border-solid border-[#086AD7] hover:border-[#211E3B] hover:bg-[#211E3B] items-center'>
-                        <a className='text-sm font-normal	px-7 pt-4 p-3.5 text-[#FFFFFF]'>Service we provide</a>
+                <div className='mt-9 justify-between flex max-w-[50%]'>
+                    <a className='rounded-lg text-white hover:text-white z-10 whitespace-nowrap w-80 h-14 bg-[#086AD7] mr-5 px-3.5 text-xs items-center relative inline-flex justify-center border border-solid border-[#086AD7] hover:border-[#211E3B] hover:bg-[#211E3B] items-center'>
+                        <span className='text-sm font-normal px-7 pt-4 p-3.5 text-[#FFFFFF]'>Service we provide</span>
                         <Icon10></Icon10>
-                    </div>
+                    </a>
 
                     <div className='rounded-lg hover:text-white z-10 whitespace-nowrap w-80 h-14 mr-80 px-3.5 p-3.5 text-xs items-center relative inline-flex justify-center border border-solid border-[#086AD7] hover:bg-[#086AD7] items-center'>
                         <a className='items-center text-sm font-normal px-7 pt-4 p-3.5'>LEARN MORE</a>
