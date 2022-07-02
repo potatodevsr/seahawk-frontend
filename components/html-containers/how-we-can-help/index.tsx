@@ -28,6 +28,7 @@ export const HowWeCanHelp = () => {
         <Icon3></Icon3>,
         <Icon4></Icon4>
     ]
+
     return (
 
         <section id="how we can help you" className=' mx-28 relative box-border flex items-center flex-col font-medium'>
@@ -37,15 +38,17 @@ export const HowWeCanHelp = () => {
             </div>
             <div className='flex w-full'>
                 <img className='flex rounded w-[395px] h-auto z-10 align-middle inline-block mr-8' src='https://rrdevs.net/demos/wp/techex/wp-content/uploads/2021/10/feature_img.jpg'></img>
+                <div className="flex flex-col">
 
-                <div id="services" className='grid grid-cols-2 gap-8 z-10 relative w-full pb-3.5'>
-                    {data.map(({ title, text }, index) => {
-                        return <Service h4={title} p={text}>
+                    <div id="services" className='grid grid-cols-2 gap-8 z-10 relative w-full pb-3.5'>
+                        {data.map(({ title, text }, index) => {
+                            return <Service h4={title} p={text}>
 
-                            {icon[index]}
-                        </Service>
-                    })}
+                                {icon[index]}
+                            </Service>
+                        })}
 
+                    </div>
                     <div className='bg-blue-500 p-20 text-white font-bold text-xl z-20 relative'>
                         Sed perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium totam rem aperiam eaque quae
                     </div>
