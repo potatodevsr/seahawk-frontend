@@ -64,7 +64,7 @@ export const RecentProject = () => {
       <div id="services" className=' mx-auto max-w-[1210px] gap-10 grid grid-cols-3 gap-6 z-10 flex relative w-full'>
         {data.blocks.map(({ image_url, text }, index) => {
           return (
-            <div className='px-7 py-14 flex flex-col items-center'>
+            <div key={index}  className='px-7 py-14 flex flex-col items-center'>
               <img id='รูปที่1' className='pb-8 rounded-t-lg rounded-md' src={image_url} />
               <div>
                 <h2 className='text-xl font-bold text-[#211E3B] inline-block pb-5'></h2>

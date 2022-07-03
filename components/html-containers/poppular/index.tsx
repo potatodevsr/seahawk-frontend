@@ -2,7 +2,7 @@ import { text } from 'node:stream/consumers'
 import React from 'react'
 import { Icon10 } from '../../../pages/icon10'
 import { Service } from '../how-we-can-help/service'
-
+ 
 export const Poppular = () => {
   const data = {
     title: 'POPULAR IT SERVICES',
@@ -46,7 +46,7 @@ export const Poppular = () => {
 
       <div id="services" className='mx-auto max-w-[1210px] gap-10 grid grid-cols-4  z-10 flex relative w-full pb-6'>
         {data.blocks.map(({ title, text, text2, image_url }, index) => {
-          return <div className='px-8 py-14 border border-solid border-[#312E49] hover:bg-[#2E2A50] flex flex-col items-center'>
+          return <div key={index} className='px-8 py-14 border border-solid border-[#312E49] hover:bg-[#2E2A50] flex flex-col items-center'>
             <img className='pb-8' src={image_url} />
             <div>
               <h3 className='text-white inline-block'>{title}</h3>

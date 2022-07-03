@@ -35,7 +35,7 @@ export const Project = () => {
     <section className='-mt-20 mx-10 bg-[#086AD7] rounded-lg z-10'>
       <div id="services" className='pt-16 grid grid-cols-4  z-10 flex relative w-full pb-6'>
         {data.map(({ score, text }, index) => {
-          return <div className='py-4 px-8 text-white flex flex-col items-center'>
+          return <div key={index} className='py-4 px-8 text-white flex flex-col items-center'>
             <Icon5></Icon5>
             <div>
               <span className='text-3xl font-medium pl-20 text-white'>+</span>
