@@ -19,21 +19,50 @@ import { Poppular } from '../components/html-containers/poppular'
 import Project from '../components/html-containers/project'
 import { RecentProject } from '../components/html-containers/recent-project'
 import { Review } from '../components/html-containers/review'
-import styles from '../styles/Home.module.css'
+
 import { fetchAPI } from './api/fetchAPI'
-import { Icon1 } from './icon1'
-import { Icon10 } from './icon10'
-import { Icon2 } from './icon2'
-import { Icon3 } from './icon3'
-import { Icon4 } from './icon4'
-import { Icon5 } from './icon5'
-import { Icon6 } from './icon6'
-import { Icon7 } from './icon7'
-import { Icon8 } from './icon8'
-import { Icon9 } from './icon9'
+
+async function fetchHomepage({ setHomepage }) {
+  const fields = [
+    '*',
+    'first_screen.image1',
+    'first_screen.image2',
+    'how_we_can_help.services',
+    'how_we_can_help.services.icon',
+    'how_we_can_help.image1',
+    'about',
+    'about.image',
+    'about.Feature',
+    'Popular',
+    'Popular.Popular', 
+    'Popular.Popular.image'
+  ]
+  const homepage = await fetchAPI(
+    {
+      url: '/api/home-pages',
+      params: {
+        populate: fields.join(',')
+      }
+    }
+  )
+  if (typeof setHomepage === 'function') setHomepage(homepage.data[0].attributes)
+  return homepage
 
 
+}
 const Home: NextPage = () => {
+  const [homepage, setHomepage] = useState()
+
+  useEffect(() => {
+    fetchHomepage({ setHomepage })
+  }, [])
+
+  useEffect(() => {
+    console.log('1111111homepage', homepage)
+
+
+  }, [homepage])
+
 
 
   return (
@@ -44,11 +73,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header></Header>
-      <HeaderBanner></HeaderBanner>
-      <HowWeCanHelp></HowWeCanHelp>
-      <About></About>
-      <Poppular></Poppular>
+      <Header ></Header>
+      <HeaderBanner data={homepage?.first_screen}></HeaderBanner>
+      <HowWeCanHelp data={homepage?.how_we_can_help}></HowWeCanHelp>
+      <About data={homepage?.about}></About>
+      <Poppular data={homepage?.Popular} ></Poppular>
       <Project></Project>
       <RecentProject></RecentProject>
       <Costumer></Costumer>
