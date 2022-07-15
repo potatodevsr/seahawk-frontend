@@ -4,7 +4,7 @@
     "en",
     "ru"
   ],
-  "defaultLocale": "th",
+  "defaultLocale": "en",
   "pages": {
     "*": [
       "common"
