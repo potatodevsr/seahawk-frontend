@@ -1,0 +1,13 @@
+{
+  "locales": [
+    "th",
+    "en",
+    "ru"
+  ],
+  "defaultLocale": "th",
+  "pages": {
+    "*": [
+      "common"
+    ]
+  }
+}
