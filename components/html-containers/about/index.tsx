@@ -1,8 +1,7 @@
 import React from 'react'
-import { Icon9 } from '../../../pages/icon9'
+import { Icon9 } from '../../../pages/icon/icon9'
 
 export const About = ({ data }) => {
-  console.log('about.data', data)
   return (
     <section className='py-32 px-28 gap-24 grid grid-cols-2 mb-px mb-0 relative block box-bordern '>
       <div>

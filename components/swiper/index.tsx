@@ -7,7 +7,6 @@ import React from 'react';
 
 
 export const Slider = ({ children }) => {
-    console.log('children', children)
     return (
         <Swiper
             spaceBetween={50}
@@ -15,7 +14,7 @@ export const Slider = ({ children }) => {
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
         >
-            {children.map((child, idx) => {
+            {children?.map((child, idx) => {
                 return <SwiperSlide key={idx}>{React.cloneElement(child, { key: idx })}</SwiperSlide>
             })}
 

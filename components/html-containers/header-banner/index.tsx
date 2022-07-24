@@ -1,19 +1,7 @@
 import React from 'react'
-import { Icon10 } from '../../../pages/icon10'
+import { Icon10 } from '../../../pages/icon/icon10'
 
 export const HeaderBanner = ({ data }) => {
-    // const data = {
-    //     title1: 'Solutions For',
-    //     title2: 'Potato ass',
-    //     text: "We Have 25 Years Of Experience In IT Solutions",
-    //     image1: 'https://rrdevs.net/demos/wp/techex/wp-content/uploads/2022/01/heros-01.jpg',
-    //     image2: 'https://rrdevs.net/demos/wp/techex/wp-content/uploads/2022/01/heros-02.jpg',
-    //     button1: 'Service we provide',
-    //     button1link: 'Service we provide',
-    //     button2: 'Learn more',
-    //     button2link: 'Learn more'
-    // }
-    console.log('data', data)
     const image1 = { "backgroundImage": `url(http://localhost:1337${data?.image1.data.attributes.url})` }
     const image2 = { "backgroundImage": `url(http://localhost:1337${data?.image2.data.attributes.url})` }
 

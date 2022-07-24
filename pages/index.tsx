@@ -22,21 +22,40 @@ import { Review } from '../components/html-containers/review'
 
 import { fetchAPI } from './api/fetchAPI'
 
+const fields = [
+  '*',
+  'first_screen.image1',
+  'first_screen.image2',
+  'how_we_can_help.services',
+  'how_we_can_help.services.icon',
+  'how_we_can_help.image1',
+  'about',
+  'about.image',
+  'about.Feature',
+  'Popular',
+  'Popular.Popular',
+  'Popular.Popular.image',
+  'Awards',
+  'recentproject',
+  'recentproject.recent',
+  'recentproject.recent.image',
+  'logo',
+  'logo.image',
+  'Pricingplan',
+  'Pricingplan.Planing',
+  'reviews',
+  'review.reviews',
+  'review.image',
+  'review.reviews.profile',
+  'latest_news',
+  'latest_news.image',
+  'latest_news.updates_news',
+  'latest_news.updates_news.image',
+  'quote',
+  'quote.get_a_quote',
+]
+
 async function fetchHomepage({ setHomepage }) {
-  const fields = [
-    '*',
-    'first_screen.image1',
-    'first_screen.image2',
-    'how_we_can_help.services',
-    'how_we_can_help.services.icon',
-    'how_we_can_help.image1',
-    'about',
-    'about.image',
-    'about.Feature',
-    'Popular',
-    'Popular.Popular', 
-    'Popular.Popular.image'
-  ]
   const homepage = await fetchAPI(
     {
       url: '/api/home-pages',
@@ -47,21 +66,33 @@ async function fetchHomepage({ setHomepage }) {
   )
   if (typeof setHomepage === 'function') setHomepage(homepage.data[0].attributes)
   return homepage
-
-
 }
+
+async function fetchMenu({ setMenu }) {
+  const menu = await fetchAPI(
+    {
+      url: '/api/menus',
+      params: {
+        populate: '*,menu.submenu'
+      }
+    }
+  )
+  if (typeof setMenu === 'function') setMenu(menu.data[0].attributes.menu)
+  return menu
+}
+
 const Home: NextPage = () => {
   const [homepage, setHomepage] = useState()
+  const [menu, setMenu] = useState()
 
   useEffect(() => {
     fetchHomepage({ setHomepage })
+    fetchMenu({ setMenu })
   }, [])
 
   useEffect(() => {
-    console.log('1111111homepage', homepage)
-
-
-  }, [homepage])
+    
+  }, [homepage, menu])
 
 
 
@@ -73,18 +104,18 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header ></Header>
+      <Header menu={menu}></Header>
       <HeaderBanner data={homepage?.first_screen}></HeaderBanner>
       <HowWeCanHelp data={homepage?.how_we_can_help}></HowWeCanHelp>
       <About data={homepage?.about}></About>
       <Poppular data={homepage?.Popular} ></Poppular>
-      <Project></Project>
-      <RecentProject></RecentProject>
-      <Costumer></Costumer>
-      <OurPricingPlan></OurPricingPlan>
-      <Review></Review>
-      <LatestNewsBlog></LatestNewsBlog>
-      <AnyKindOfItSolutions></AnyKindOfItSolutions>
+      <Project data={homepage?.Awards}></Project>
+      <RecentProject data={homepage?.recentproject}></RecentProject>
+      <Costumer data={homepage?.logo}></Costumer>
+      <OurPricingPlan data={homepage?.Pricingplan}></OurPricingPlan>
+      <Review data={homepage?.review}></Review>
+      <LatestNewsBlog data={homepage?.latest_news}></LatestNewsBlog>
+      <AnyKindOfItSolutions data={homepage?.quote}></AnyKindOfItSolutions>
       <Footer></Footer>
 
 

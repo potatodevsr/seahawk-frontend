@@ -1,8 +1,12 @@
 import React from 'react'
-import { Icon10 } from '../../../pages/icon10'
+import { Icon10 } from '../../../pages/icon/icon10'
 import { MenuDropdown } from '../menu-dropdown'
 
-export const Header = () => {
+export const Header = ({ menu }) => {
+    function renderMenu(menuElement) {
+        return <MenuDropdown menuElement={menuElement}></MenuDropdown>
+    }
+    console.log('meeeeenu', menu)
     return (
         <header className='relative z-30 block'>
             <div>
@@ -16,11 +20,12 @@ export const Header = () => {
                         </div>
                         <div className='menu'>
                             <ul className='flex'>
-                                <MenuDropdown></MenuDropdown>
+                                {menu?.map(renderMenu)}
+                                {/* 
                                 <li className='px-4 py-2 font-bold'>Demos</li>
                                 <li className='px-4 py-2 font-bold'>Pages</li>
                                 <li className='px-4 py-2 font-bold'>Blog</li>
-                                <li className='px-4 py-2 font-bold'>Contact</li>
+                                <li className='px-4 py-2 font-bold'>Contact</li> */}
                             </ul>
                         </div>
                         <div className='rounded-lg text-white ounded-lg z-10 whitespace-nowrap w-50 h-14 bg-[#086AD7] mr-5 px-3.5 text-xs items-center relative inline-flex justify-center border border-solid border-[#086AD7] hover:border-[#211E3B] hover:bg-[#211E3B] items-center'>

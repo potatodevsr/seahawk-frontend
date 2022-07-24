@@ -1,16 +1,13 @@
 import React from 'react'
-import { Icon10 } from '../../../pages/icon10'
-import { Icon9 } from '../../../pages/icon9'
+import { Icon10 } from '../../../pages/icon/icon10'
+import { Icon9 } from '../../../pages/icon/icon9'
 
-export const AnyKindOfItSolutions = () => {
-    const data = {
-        title: "Ready To Get Free Consulations For Any Kind Of It Solutions ?",
-        }
+export const AnyKindOfItSolutions = ({ data }) => {
     return (
         <section className='-mt-10 rounded-md py-20 px-28 gap-24 grid grid-cols-2 mb-px mb-0 relative block box-bordern bg-[#211E3B]'>
             <div>
                 <div className='font-normal mx-auto decoration-black leading-6 text-left	box-border'>
-                    <h3 className='decoration-black text-4xl font-black box-border clear-both text-[#ffff] mb-2 m-0'>{data.title}</h3>
+                    <h3 className='decoration-black text-4xl font-black box-border clear-both text-[#ffff] mb-2 m-0'>{data?.get_a_quote}</h3>
                 </div>
             </div>
             <div>

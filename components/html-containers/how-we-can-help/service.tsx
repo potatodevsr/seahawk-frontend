@@ -7,7 +7,6 @@ interface Props {
 }
 
 export const Service: FC<Props> = ({ icon, h4, p }) => {
-    console.log('icon', icon)
     return (
         <div className='bg-white py-4 px-8  flex items-center'>
             <img src={"http://localhost:1337" + icon?.data?.attributes.url} alt={h4}  mr-80 />
